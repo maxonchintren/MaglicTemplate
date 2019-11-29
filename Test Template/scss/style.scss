@@ -1,0 +1,17 @@
+@import 'normalizeFile';
+
+$color-background-main: white;
+$color-main: #fffefe;
+$color-sub: #6f6f6f;
+$color-headings: black;
+
+/*=====MIXINS=====*/
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+/*=====END MIXINS=====*/
+
+body {
+    background-color: $color-background-main;
+}
