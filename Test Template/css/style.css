@@ -302,7 +302,82 @@ template {
 [hidden] {
   display: none; }
 
+/*===COLORS===*/
+/*===END COLORS===*/
+/*===FONTS===*/
+/*===END FONTS*/
 /*=====MIXINS=====*/
 /*=====END MIXINS=====*/
+html {
+  font-size: 13px; }
+
 body {
-  background-color: white; }
+  background-color: white;
+  width: 100%; }
+
+section.header-flex-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/header-background.png);
+  background-size: cover; }
+  section.header-flex-container div.nav-flex-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center; }
+    section.header-flex-container div.nav-flex-container div.logo-container {
+      margin: 50px 0 50px 50px;
+      width: 30%;
+      height: 30%;
+      text-align: center; }
+      section.header-flex-container div.nav-flex-container div.logo-container img {
+        width: 22%;
+        height: 22%; }
+    section.header-flex-container div.nav-flex-container nav {
+      width: 60%;
+      height: auto;
+      margin: 80px 0;
+      font-family: "Lato", sans-serif; }
+      section.header-flex-container div.nav-flex-container nav ul {
+        display: block;
+        color: #fffefe;
+        list-style: none;
+        width: 100%;
+        height: auto;
+        overflow: visible; }
+        section.header-flex-container div.nav-flex-container nav ul li {
+          display: inline;
+          font-size: calc(0.5em + 0.7vw);
+          text-transform: uppercase;
+          padding: 1%; }
+
+div.heading-container {
+  margin: 50px auto 200px; }
+  div.heading-container h1 {
+    color: #fffefe;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-weight: bolder;
+    font-size: calc(1em + 3vw);
+    margin: 10px auto; }
+  div.heading-container div.subtext-container {
+    margin: 0 auto;
+    text-align: center; }
+    div.heading-container div.subtext-container p {
+      color: #fffefe;
+      font-size: calc(0.5em + 0.7vw); }
+  div.heading-container div.button-container {
+    margin: 50px auto 0 0;
+    text-align: center; }
+    div.heading-container div.button-container a {
+      color: #fffefe;
+      font-size: calc(0.5em + 0.7vw);
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      border: 2px solid rgba(255, 254, 254, 0.2);
+      padding: 7px 25px; }
+      div.heading-container div.button-container a:hover {
+        cursor: pointer; }

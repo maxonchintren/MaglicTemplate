@@ -1,9 +1,19 @@
 @import 'normalizeFile';
 
+/*===COLORS===*/
 $color-background-main: white;
 $color-main: #fffefe;
 $color-sub: #6f6f6f;
 $color-headings: black;
+$color-button-background: transparent;
+/*===END COLORS===*/
+
+/*===FONTS===*/
+$font-crimson:'Crimson Text', serif;
+$font-lato:'Lato', sans-serif;
+$font-monts:'Montserrat', sans-serif;
+$font-sans:'Open Sans', sans-serif;
+/*===END FONTS*/
 
 /*=====MIXINS=====*/
 @mixin size($width, $height) {
@@ -11,7 +21,98 @@ $color-headings: black;
     height: $height;
 }
 /*=====END MIXINS=====*/
+html{
+    font-size: 13px;
+}
 
 body {
     background-color: $color-background-main;
+    width: 100%;
 }
+
+section.header-flex-container {
+    display:flex;
+    flex-direction: column;
+    background-image: url(../images/header-background.png);
+    background-size: cover;
+
+    div.nav-flex-container {
+        @include size(100%, auto);
+        display: flex;
+        flex-direction:  row;
+        flex-wrap: nowrap;
+        align-items:center;
+
+        div.logo-container{
+            margin: 50px 0 50px 50px;
+            @include size(30%, 30%);
+            text-align: center;
+            img {
+                @include size(22%, 22%);
+            }
+
+        }
+        nav {
+            @include size(60%, auto);
+            margin: 80px 0;
+            font-family: $font-lato;
+            ul {
+                display: block;
+                color: $color-main;
+                list-style: none;
+                @include size(100%, auto);
+                overflow: visible;
+
+                li {
+                    display: inline;
+                    font-size: calc(0.5em + 0.7vw);
+                    text-transform: uppercase;
+                    padding:1%;
+                }
+            }
+        }
+    }
+}
+
+div.heading-container {
+    margin: 50px auto 200px;
+
+    h1 {
+        color: $color-main;
+        text-transform: uppercase;
+        font-family: $font-lato;
+        font-weight: bolder;
+        font-size: calc(1em + 3vw);
+        margin: 10px auto;
+    }
+
+    div.subtext-container{
+        margin: 0 auto;
+        text-align: center;
+
+        p {
+            color: $color-main;
+            font-size: calc(0.5em + 0.7vw);
+        }
+    }
+
+    div.button-container {
+        margin: 50px auto 0 0;
+        text-align: center;
+        
+        a {
+            color: $color-main;
+            font-size: calc(0.5em + 0.7vw);
+            text-transform: uppercase;
+            font-family: $font-monts;
+            font-weight: bold;
+            border: 2px solid transparentize($color-main, 0.8);
+            padding: 7px 25px;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
