@@ -1,3 +1,4 @@
+@use 'sass:color'
 @import 'normalizeFile';
 
 /*===COLORS===*/
@@ -6,6 +7,8 @@ $color-main: #fffefe;
 $color-sub: #6f6f6f;
 $color-headings: black;
 $color-button-background: transparent;
+$color-button-border: 2px solid transparentize($color-main, 0.8);
+$color-hover: coral;
 /*===END COLORS===*/
 
 /*===FONTS===*/
@@ -28,6 +31,7 @@ html{
 body {
     background-color: $color-background-main;
     width: 100%;
+    margin: 0;
 }
 
 section.header-flex-container {
@@ -35,6 +39,8 @@ section.header-flex-container {
     flex-direction: column;
     background-image: url(../images/header-background.png);
     background-size: cover;
+    padding-bottom: 200px;
+
 
     div.nav-flex-container {
         @include size(100%, auto);
@@ -44,9 +50,10 @@ section.header-flex-container {
         align-items:center;
 
         div.logo-container{
-            margin: 50px 0 50px 50px;
+            margin: 50px 0 50px 5%;
             @include size(30%, 30%);
             text-align: center;
+            
             img {
                 @include size(22%, 22%);
             }
@@ -61,13 +68,20 @@ section.header-flex-container {
                 color: $color-main;
                 list-style: none;
                 @include size(100%, auto);
-                overflow: visible;
+                overflow:visible;
+                padding-left: 0;
 
                 li {
                     display: inline;
                     font-size: calc(0.5em + 0.7vw);
                     text-transform: uppercase;
                     padding:1%;
+                    transition: 0.2s;
+                    
+                    &:hover {
+                        cursor:pointer;
+                        color: $color-hover;
+                    }
                 }
             }
         }
@@ -75,8 +89,12 @@ section.header-flex-container {
 }
 
 div.heading-container {
-    margin: 50px auto 200px;
-
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-left: 0px;
+    @include size(100%, auto);
+    text-align: center;
+    
     h1 {
         color: $color-main;
         text-transform: uppercase;
@@ -85,19 +103,42 @@ div.heading-container {
         font-size: calc(1em + 3vw);
         margin: 10px auto;
     }
+    
+    h2 {
+        color: $color-headings;
+        text-transform: uppercase;
+        font-family: $font-lato;
+        font-weight: bolder;
+        text-align:left;
+        margin: 0px auto 30px;
+        @include size(55%, auto);
+        letter-spacing: 2px;
+        font-size: calc(1em + 1vw);
+    }
 
     div.subtext-container{
         margin: 0 auto;
         text-align: center;
 
-        p {
+        p.header-subtext {
             color: $color-main;
+            font-size: calc(0.5em + 0.7vw);
+        }
+        
+        p.subtext {
+            font-family: $font-sans;
+            color: $color-sub;
+            font-weight: lighter;
+            @include size(55%, auto);
+            text-align: left;
+            margin: 0 auto;
+            line-height: 25px;
             font-size: calc(0.5em + 0.7vw);
         }
     }
 
     div.button-container {
-        margin: 50px auto 0 0;
+        margin: 9% auto 0 0;
         text-align: center;
         
         a {
@@ -106,13 +147,186 @@ div.heading-container {
             text-transform: uppercase;
             font-family: $font-monts;
             font-weight: bold;
-            border: 2px solid transparentize($color-main, 0.8);
+            border: $color-button-border;
             padding: 7px 25px;
+            transition: 0.2s;
             
             &:hover {
                 cursor: pointer;
+                color: $color-hover;
+                letter-spacing: 1px;
+                border-color: $color-main;
+            }
+        }
+    }
+    
+    div.services-benefints-container_list {
+        margin: 0 auto;
+         @include size(80%, auto);
+
+        ul.services-benefits_list {
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+            @include size(100%, auto);
+            flex-direction: row;
+            align-content: space-between;
+
+            li {
+                display: flex;
+                font-size: calc(0.5em + 0.7vw);
+                text-transform: uppercase;
+                padding:2%;
+                padding-bottom: 0;
+                color: $color-headings;
+                @include size(100%, 10%);
+                align-items: center;
+                font-family: $font-monts;
+                font-weight: bold;
+                
+                span {
+                    padding-left:  10%;
+                }
+            }
+            
+            img {
+                @include size(55%, 55%);
+                max-width: 60px;
+                min-width: 24px;
+                max-height: 60px;
+                min-height: 24px;
             }
         }
     }
 }
+
+section.services {
+    background-image: url(../images/services-background.png);
+    background-size: cover;
+    @include size(100%, auto);
+    padding-bottom: 40px;
+}
+
+div.subheading {
+    margin: 5% auto;
+    text-align: center;
+    @include size(100%, 20%);
+    
+    span {
+        color: $color-main;
+        border-bottom: 3px solid transparentize($color-main, 0.4);
+        padding: 0 35px 15px;
+        font-family: $font-monts;
+        font-weight: bold;
+        font-size: calc(1em + 1vw);
+        text-transform: uppercase;  
+    }
+    
+    p {
+        text-transform: capitalize;
+        font-size:calc(0.9em + 0.7vw);
+        font-family:$font-sans;
+        font-weight: lighter;
+        color: $color-main;
+        margin: 30px auto;
+    }
+}
+
+div.services-options_list {
+    width: 100%;
+    
+    ul {
+        display: flex;
+        color: $color-main;
+        list-style: none;
+        @include size(70%, auto);
+        margin: 0 auto;
+        align-items: center;
+        
+        
+        li {
+            display: inline-block;;
+            font-size: calc(0.5em + 0.5vw);
+            text-transform: uppercase;
+            margin: 5px;
+            padding: 2% 1%;
+            font-family: $font-monts;
+            border: 1px solid transparentize($color-main, 0.3);
+            @include size(20%, auto);
+            text-align: center;
+            font-weight: bold;
+            transition: 0.1s;
+            min-height: 15px;
+            min-width: 70px;
+            max-height: 30px;
+            
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-10px);
+                border: 1px solid $color-hover;
+            }
+        }
+    }
+}
+
+section.photo-block {
+    @include size(100%, 100%);
+    
+    div.container_photo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include size(100%, 100%);
+ 
+        
+        div.wrapper_img{ 
+            @include size(25%, auto);
+            text-align: center;
+            position: relative;
+            
+            img {
+                @include size(100%, 100%);
+                min-height: 100%;
+                min-width: 100%;
+            }
+            
+            span {
+                display: block;
+                font-size: calc(0.5em + 0.5vw);
+                font-family: $font-monts;
+                position: absolute;
+                padding-top: 40%;
+                height: 50%;
+                width: 100%;
+                color: $color-main;
+                font-weight: bold;
+                text-align: center;
+                z-index: 999;
+                text-transform: uppercase;
+                opacity: 0;
+                transition: 0.2s;
+                
+                &:hover {
+                    opacity: 1;
+                    z-index: 999;
+                    background-color: transparentize(black, 0.4);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
