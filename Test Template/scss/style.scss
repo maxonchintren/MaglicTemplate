@@ -92,7 +92,7 @@ div.heading-container {
     margin: 0 auto;
     padding-top: 70px;
     padding-left: 0px;
-    @include size(100%, auto);
+    @include size(70%, auto);
     text-align: center;
     
     h1 {
@@ -134,6 +134,18 @@ div.heading-container {
             margin: 0 auto;
             line-height: 25px;
             font-size: calc(0.5em + 0.7vw);
+        }
+        
+        span.name {
+            border-top: 2px solid transparentize($color-sub, 0.4);
+            padding-top: 8px;
+        }
+        
+        span {
+            font-family: $font-monts;
+            font-size: calc(0.5em + 0.5vw);
+            font-weight: bold;
+            text-transform: uppercase;
         }
     }
 
@@ -214,11 +226,11 @@ div.subheading {
     
     span {
         color: $color-main;
-        border-bottom: 3px solid transparentize($color-main, 0.4);
+        border-bottom: 3px solid transparentize($color-headings, 0.4);
         padding: 0 35px 15px;
         font-family: $font-monts;
         font-weight: bold;
-        font-size: calc(1em + 1vw);
+        font-size: calc(0.8em + 1vw);
         text-transform: uppercase;  
     }
     
@@ -229,6 +241,14 @@ div.subheading {
         font-weight: lighter;
         color: $color-main;
         margin: 30px auto;
+    }
+    
+    .black-sub {
+        color: $color-headings;
+    }
+    
+    .gray-sub {
+        color:$color-sub;
     }
 }
 
@@ -296,8 +316,7 @@ section.photo-block {
                 font-family: $font-monts;
                 position: absolute;
                 padding-top: 40%;
-                height: 50%;
-                width: 100%;
+                @include size(100%, 49%);
                 color: $color-main;
                 font-weight: bold;
                 text-align: center;
@@ -316,9 +335,74 @@ section.photo-block {
     }
 }
 
+div.support-flex-container {
+    display: flex;
+    flex-direction: row;
 
+    
+    
+    div.support-container_img {
+        @include size(30%, auto);
+        flex-shrink: 2;
+        
+        img {
+            @include size(100%,100%);
+            max-height: 390px;
+            max-width: 400px;
+            min-width: 231px;
+        }
+        
+    }
+}
 
-
+section.support {
+    
+    div.wrapper_table{
+        @include size(100%, auto);
+        margin-top: 80px;
+        
+        table {
+            
+            tr {
+                @include size(30%, auto);
+                margin: 0 auto;
+                
+                td {
+                    font-family: $font-monts;
+                    margin: 0 auto;
+                    padding: 2% 5%;
+                    
+                    hr {
+                        color: $color-sub;
+                        opacity: 0.5;
+                        height: 2px;
+                    }
+                    
+                    span {
+                        font-size: calc(0.5em + 0.8vw);
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        
+                        
+                    }
+                    
+                    p {
+                        float: right; 
+                        padding-left: 5px;     
+                    }
+                    
+                    img {
+                        @include size(12%, 30%);
+                        float:left;
+                        padding: 0 5px 3px 0;
+                        max-width: 40px;
+                        max-height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
