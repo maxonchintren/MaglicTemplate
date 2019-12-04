@@ -440,41 +440,132 @@ section.articles {
           max-height: 238px;
           min-height: 100%;
           min-width: 100%; }
-        section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_img img.arrow {
+        section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_img img.arrow-reverse {
           width: 10%;
           height: 20%;
           position: absolute;
           transform: rotate(180deg);
           top: 40%;
           right: -1%; }
+        section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_img img.arrow {
+          width: 10%;
+          height: 20%;
+          position: absolute;
+          top: 40%;
+          left: 0%; }
       section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_article {
         width: 50%;
         height: 100%;
-        background-color: #eaeaea;
-        padding: 0 15px; }
+        background-color: #eaeaea; }
         section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_article span {
           font-family: "Crimson Text", serif;
           font-style: italic;
           font-size: calc(0.4em + 0.4vw);
           display: inline-block;
-          padding-top: 10px; }
+          padding-top: 10px;
+          padding-left: 10px;
+          text-transform: capitalize; }
         section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_article h3 {
           font-family: "Montserrat", sans-serif;
           font-size: calc(0.8em + 0.7vw);
           margin: 10px 0;
-          text-transform: capitalize; }
+          text-transform: capitalize;
+          padding-left: 10px; }
         section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_article p {
           font-family: "Montserrat", sans-serif;
           font-size: calc(0.5em + 0.5vw);
           margin: 0 0 5% 0;
-          line-height: 25px; }
+          line-height: 25px;
+          padding-left: 10px; }
         section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_article a {
           font-family: "Montserrat", sans-serif;
           font-size: calc(0.4em + 0.4vw);
-          padding-right: 20px;
           text-transform: uppercase;
-          transition: 0.2s; }
+          transition: 0.2s;
+          padding-left: 10px; }
           section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_article a:hover {
             letter-spacing: 1px;
             border-bottom: 2px solid coral;
             cursor: pointer; }
+
+section.plans {
+  width: 100%;
+  height: auto;
+  background-color: #fffff9; }
+  section.plans div.subheading {
+    margin-top: 0;
+    padding-top: 60px; }
+  section.plans div.free-trial-offer {
+    margin: 0 auto;
+    text-align: center; }
+    section.plans div.free-trial-offer h2 {
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-size: calc(0.9em + 0.9vw); }
+      section.plans div.free-trial-offer h2 span {
+        font-family: "Open Sans", sans-serif;
+        font-style: italic;
+        font-weight: lighter;
+        text-transform: capitalize;
+        font-size: calc(0.4em + 0.5vw);
+        padding-right: 5px; }
+  section.plans div.plans-flex-container {
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin: 60px auto;
+    justify-content: space-between; }
+    section.plans div.plans-flex-container div.plans_plan {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20%;
+      height: auto;
+      border: 1px solid rgba(111, 111, 111, 0.2);
+      position: relative;
+      background-color: inherit;
+      transition: 0.2s; }
+      section.plans div.plans-flex-container div.plans_plan:hover {
+        background-color: white;
+        transform: translateY(-20px);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
+      section.plans div.plans-flex-container div.plans_plan h3 {
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(111, 111, 111, 0.2);
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: calc(0.7em + 0.5vw); }
+      section.plans div.plans-flex-container div.plans_plan p {
+        color: #6f6f6f;
+        font-family: "Montserrat", sans-serif;
+        font-size: calc(0.6em + 0.5vw); }
+      section.plans div.plans-flex-container div.plans_plan span.price {
+        display: inline-block;
+        margin: 20px auto 40px;
+        font-size: calc(1.5em + 1vw);
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif; }
+      section.plans div.plans-flex-container div.plans_plan span.monthly {
+        font-size: calc(0.5em + 0.2vw);
+        font-weight: lighter;
+        font-style: italic;
+        font-family: "Open Sans", sans-serif; }
+      section.plans div.plans-flex-container div.plans_plan a {
+        position: absolute;
+        bottom: -5%;
+        padding: 4% 10%;
+        border: 1px solid coral;
+        font-size: calc(0.4em + 0.8vw);
+        text-transform: uppercase;
+        opacity: 0;
+        font-weight: bold;
+        transition: 0.2s;
+        font-family: "Open Sans", sans-serif; }
+        section.plans div.plans-flex-container div.plans_plan a:hover {
+          opacity: 1;
+          z-index: 999;
+          background-color: white;
+          cursor: pointer; }

@@ -579,6 +579,7 @@ section.articles {
 				text-align: center;
 				position: relative;
 				
+				
 				img.article-img {
 					@include size(100%, 100%);
 					max-height: 238px;
@@ -586,19 +587,28 @@ section.articles {
                 	min-width: 100%;
 				}
 				
-				img.arrow {
+				img.arrow-reverse {
 					@include size(10%, 20%);
 					position: absolute;
 					transform: rotate(180deg);
 					top: 40%;
 					right: -1%;
 				}
+				
+				img.arrow {
+					@include size(10%, 20%);
+					position: absolute;
+					top: 40%;
+					left: 0%;
+				}
+				
+				
 			}
 			
 			div.articles-wrapper_article {
 				@include size(50%, 100%);
 				background-color: $color-background-article;
-				padding: 0 15px;
+				
 				
 				span {
 					font-family: $font-crimson;
@@ -606,6 +616,8 @@ section.articles {
 					font-size: calc(0.4em + 0.4vw);
 					display: inline-block;
 					padding-top: 10px;
+					padding-left: 10px;
+					text-transform: capitalize;
 				}
 				
 				h3 {
@@ -613,6 +625,7 @@ section.articles {
 					font-size: calc(0.8em + 0.7vw);
 					margin: 10px 0;
 					text-transform: capitalize;
+					padding-left: 10px;
 				}
 				
 				p {
@@ -620,15 +633,16 @@ section.articles {
 					font-size: calc(0.5em + 0.5vw);
 					margin: 0 0 5% 0;
 					line-height: 25px;
+					padding-left: 10px;
 					
 				}
 				
 				a {
 					font-family: $font-monts;
 					font-size: calc(0.4em + 0.4vw);
-					padding-right: 20px;
 					text-transform: uppercase;
 					transition: 0.2s;
+					padding-left: 10px;
 					
 					
 					&:hover {
@@ -642,7 +656,113 @@ section.articles {
 	}
 }
 
-
+section.plans {
+	@include size(100%, auto);
+	background-color: #fffff9;
+	
+	div.subheading {
+		margin-top: 0;
+		padding-top: 60px;
+	}
+	
+	div.free-trial-offer {
+		margin: 0 auto;
+		text-align: center;
+		
+		h2 {
+			text-transform: uppercase;
+			font-family: $font-monts;
+			font-size: calc(0.9em + 0.9vw);
+			
+			span {
+				font-family: $font-sans;
+				font-style: italic;
+				font-weight: lighter;
+				text-transform: capitalize;
+				font-size: calc(0.4em + 0.5vw);
+				padding-right: 5px;
+			}
+		}
+	}
+	
+	div.plans-flex-container {
+		display: flex;
+		@include size(80%, auto);
+		margin: 60px auto;
+		justify-content: space-between;
+		
+		div.plans_plan {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			@include size(20%, auto);
+			border: 1px solid transparentize($color-sub, 0.8);
+			position: relative;
+			background-color: inherit;
+			transition: 0.2s;
+			
+			&:hover {
+				background-color: $color-background-main;
+				transform: translateY(-20px);
+				box-shadow: 0 0 15px rgba(0,0,0,0.1);
+			}
+			
+			h3 {
+				text-transform: uppercase;
+				border-bottom: 1px solid transparentize($color-sub, 0.8);
+				width: 100%;
+				text-align: center;
+				padding-bottom: 10px;
+				font-family: $font-monts;
+				font-weight: bold;
+				font-size: calc(0.7em + 0.5vw);
+			}
+			
+			p {
+				color: $color-sub;
+				font-family: $font-monts;
+				font-size: calc(0.6em + 0.5vw);
+			}
+			
+			span.price {
+				display: inline-block;
+				margin: 20px auto 40px;
+				font-size: calc(1.5em + 1vw);
+				font-weight: bold;
+				font-family: $font-monts;
+				
+			}
+			
+			span.monthly {
+				font-size: calc(0.5em + 0.2vw);
+				font-weight: lighter;
+				font-style: italic;
+				font-family: $font-sans;
+				
+			}
+			
+			a {
+				position: absolute;
+				bottom: -5%;
+				padding: 4% 10%;
+				border: 1px solid $color-hover;
+				font-size: calc(0.4em + 0.8vw);
+				text-transform: uppercase;
+				opacity: 0;
+				font-weight: bold;
+				transition: 0.2s;
+				font-family: $font-sans;
+				
+				&:hover {
+					opacity: 1;
+					z-index: 999;
+					background-color: $color-background-main;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
 
 
 
