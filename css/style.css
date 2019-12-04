@@ -473,7 +473,6 @@ section.articles {
           font-size: calc(0.4em + 0.4vw);
           padding-right: 20px;
           text-transform: uppercase;
-          font-weight: bold;
           transition: 0.2s; }
           section.articles div.articles-flex-container div.wrapper_img_article div.articles-wrapper_article a:hover {
             letter-spacing: 1px;
