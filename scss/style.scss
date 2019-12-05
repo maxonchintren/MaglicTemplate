@@ -78,11 +78,16 @@ section.header-flex-container {
                     text-transform: uppercase;
                     padding:1%;
                     transition: 0.2s;
-                    
-                    &:hover {
-                        cursor:pointer;
-                        color: $color-hover;
-                    }
+					
+					a {
+						text-decoration: none;
+						color: $color-main;
+						
+						&:hover {
+							cursor:pointer;
+							color: $color-hover;
+						}
+					}
                 }
             }
         }
@@ -296,9 +301,12 @@ div.services-options_list {
 section.photo-block {
     @include size(100%, 100%);
 	
-    
-    div.container_photo {
+	#block-1 {
 		display: flex;
+	}
+	
+    div.container_photo {
+		display: none;
         flex-direction: row;
         flex-wrap: wrap;
         @include size(100%, 100%);

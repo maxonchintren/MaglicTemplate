@@ -8,11 +8,13 @@
 	<meta name="description" content="Example description">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato|Montserrat|Open+Sans:300,400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato|Montserrat|Open+Sans:300,400&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 
 <body>
-	<header>
+	<header id='home'>
         <section class='header-flex-container'>
             <div class='nav-flex-container'>
                 <div class='logo-container'>
@@ -20,13 +22,13 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a>home</a></li>
-                        <li><a>services</a></li>
-                        <li><a>work</a></li>
-                        <li><a>about us</a></li>
-                        <li><a>team</a></li>
-                        <li><a>blog</a></li>
-                        <li><a>pricing</a></li>
+                        <li><a href='#home'>home</a></li>
+                        <li><a href=#services>services</a></li>
+                        <li><a href ='#work'>work</a></li>
+                        <li><a href ='#about'>about us</a></li>
+                        <li><a href ='#team'>team</a></li>
+                        <li><a href ='#blog'>blog</a></li>
+                        <li><a href ='#pricing'>pricing</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,7 +44,7 @@
         </section>
     </header>
 	<main>
-        <section class='services'>
+        <section id='services' class='services'>
             <div class='heading-container'>
                 <h2>AWESOME MULTI-CONCEPT STUDIO</h2>
                 <div class='subtext-container'>
@@ -65,15 +67,15 @@
             </div>
             <div class="services-options_list">
                 <ul>
-                    <li><a>branding design</a></li>
-                    <li><a>photography</a></li>
-                    <li><a>web design</a></li>
+                    <li><a onclick="showBlockOne()">branding design</a></li>
+                    <li><a onclick="showBlockTwo()">photography</a></li>
+                    <li><a onclick="showBlockThree()">web design</a></li>
                     <li><a>+</a></li>
                 </ul>
             </div>
         </section>
-        <section class='photo-block'>
-            <div id = 'block-1-show' class='container_photo'>
+        <section class='photo-block' id='work'>
+            <div id = 'block-1' class='container_photo'>
                 <div class='wrapper_img'>
                     <span>Crossfit : 15.4 Power of the Sea</span>
                     <img src='./images/photo-block_1.png'>
@@ -107,8 +109,75 @@
                     <img src='./images/photo-block_8.png'>
                 </div>
             </div>
+			<div id = 'block-2' class='container_photo'>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Power of the Sea</span>
+                    <img src='./images/photo-block_8.png'>
+                </div>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_5.png'>
+                </div>
+				<div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Power of the Sea</span>
+                    <img src='./images/photo-block_7.png'>
+                </div>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_6.png'>
+                </div>
+				<div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Power of the Sea</span>
+                    <img src='./images/photo-block_3.png'>
+                </div>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_2.png'>
+                </div>
+				<div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Power of the Sea</span>
+                    <img src='./images/photo-block_1.png'>
+                </div>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_4.png'>
+                </div>
+			</div>
+			<div id = 'block-3' class='container_photo'>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Power of the Sea</span>
+                    <img src='./images/photo-block_1.png'>
+                </div>
+				<div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_7.png'>
+                </div>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_8.png'>
+                </div>
+				<div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Very Laaaaaaaaaaaaaaaarge TEXXXT, I don't joke, it's really huge.</span>
+                    <img src='./images/photo-block_3.png'>
+                </div>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_4.png'>
+                </div><div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Very Laaaaaaaaaaaaaaaarge TEXXXT, I don't joke, it's really huge.</span>
+                    <img src='./images/photo-block_2.png'>
+                </div>
+                <div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_5.png'>
+                </div>
+				<div class='wrapper_img'>
+                    <span>Crossfit : 15.4 Open Workout</span>
+                    <img src='./images/photo-block_6.png'>
+                </div>
+			</div>
         </section>
-        <section class='support'>
+        <section class='support' id='about'>
             <div class='subheading'>
                 <span class='black-sub'>why choose us</span>
                 <p class='gray-sub'>our mission we build amazing website</p>
@@ -197,7 +266,7 @@
                 </div>
             </div>
         </section>
-        <section class='team'>
+        <section class='team' id='team'>
             <div class='subheading'>
                 <span class='black-sub'>meet our team</span>
                 <p class='gray-sub'>we make beatiful template</p>
@@ -233,7 +302,7 @@
                 </div>
             </div>
         </section>
-        <section class='articles'>
+        <section class='articles' id='blog'>
             <div class='subheading'>
                 <span class='black-sub'>latest blog</span>
                 <p class='gray-sub'>tell your story</p>
@@ -289,7 +358,7 @@
 				</div>
             </div>
         </section>
-        <section class='plans'>
+        <section class='plans' id='pricing'>
 			<div class='subheading'>
 				<span class='black-sub'>pricing &amp; plans</span>
                 <p class='gray-sub'>Get Tour Plans for Work</p>

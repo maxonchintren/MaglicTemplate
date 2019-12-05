@@ -54,9 +54,12 @@ section.header-flex-container {
           text-transform: uppercase;
           padding: 1%;
           transition: 0.2s; }
-          section.header-flex-container div.nav-flex-container nav ul li:hover {
-            cursor: pointer;
-            color: coral; }
+          section.header-flex-container div.nav-flex-container nav ul li a {
+            text-decoration: none;
+            color: #fffefe; }
+            section.header-flex-container div.nav-flex-container nav ul li a:hover {
+              cursor: pointer;
+              color: coral; }
 
 div.heading-container {
   margin: 0 auto;
@@ -224,8 +227,10 @@ div.services-options_list {
 section.photo-block {
   width: 100%;
   height: 100%; }
+  section.photo-block #block-1 {
+    display: flex; }
   section.photo-block div.container_photo {
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
